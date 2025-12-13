@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://matheuscamarques.github.io/sitemap.xml
