@@ -37,15 +37,27 @@
     }
     </script>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YQ3C5D4WGF"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- 
+      TODO: Lägg till ditt skript för Consent Management Platform (CMP) här. 
+      Det ska laddas FÖRE Google Tag (gtag.js)-skriptet. 
+      Exempel på CMP:er: Cookiebot, CookieYes, Iubenda, etc.
+    -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YQ3C5D4WGF"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'analytics_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied'
+      });
 
-  gtag('config', 'G-YQ3C5D4WGF');
-</script>
+      gtag('js', new Date());
+      gtag('config', 'G-YQ3C5D4WGF');
+    </script>
 </head>
 <body>
 

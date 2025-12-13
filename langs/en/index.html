@@ -25,6 +25,7 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     
     <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="../../consent.css">
 
     <script type="application/ld+json">
     {
@@ -37,17 +38,34 @@
     }
     </script>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YQ3C5D4WGF"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- 
+      TODO: Add your Consent Management Platform (CMP) script here.
+      It should be loaded BEFORE the Google Tag (gtag.js) script.
+      Examples of CMPs: Cookiebot, CookieYes, Iubenda, etc.
+    -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YQ3C5D4WGF"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'analytics_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied'
+      });
 
-  gtag('config', 'G-YQ3C5D4WGF');
-</script>
+      gtag('js', new Date());
+      gtag('config', 'G-YQ3C5D4WGF');
+    </script>
 </head>
 <body>
+    <div id="cookie-consent-banner">
+        <p>This website uses cookies to improve the user experience. By continuing to browse, you agree to the use of cookies.</p>
+        <button id="accept-cookie-btn">Accept</button>
+        <button id="decline-cookie-btn">Decline</button>
+    </div>
 
     <header class="header">
         <div class="container header-content">
@@ -502,5 +520,6 @@
             }
         });
     </script>
+    <script src="../../consent.js"></script>
 </body>
 </html>
