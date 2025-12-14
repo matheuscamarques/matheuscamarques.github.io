@@ -4,8 +4,8 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: #232323;
-    color: white;
+    background-color: var(--primary); /* Changed to use primary color */
+    color: var(--primary-fg); /* Changed to use primary foreground color */
     padding: 20px;
     text-align: center;
     z-index: 1000;
@@ -17,8 +17,8 @@
 }
 
 #cookie-consent-banner button {
-    background-color: #4CAF50;
-    color: white;
+    background-color: var(--secondary); /* Changed to use secondary color */
+    color: var(--secondary-fg); /* Changed to use secondary foreground color */
     border: none;
     padding: 10px 20px;
     text-align: center;
@@ -31,5 +31,5 @@
 }
 
 #cookie-consent-banner #decline-cookie-btn {
-    background-color: #f44336;
+    background-color: var(--accent); /* Changed to use accent color */
 }

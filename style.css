@@ -1,7 +1,7 @@
 /* --- Variáveis --- */
 :root {
-    --background: #0A2342;
-    --foreground: #0A2342;
+    --background: #FFFFFF; /* Changed to white for main background */
+    --foreground: #0A2342; /* Main text color */
     
     --primary: #0A2342;
     --primary-fg: #FFFFFF;
@@ -13,7 +13,7 @@
     --accent-fg: #FFFFFF;
     
     --muted: #F0F4F8;
-    --muted-fg: #5A677D;
+    --muted-fg: #0A2342; /* Navy blue for text on muted background */
     
     --border: #DDE4ED;
     --radius: 0.75rem;
@@ -41,8 +41,8 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body {
     font-family: var(--font-sans);
-    background-color: var(--background);
-    color: var(--foreground);
+    background-color: var(--background); /* Use the new --background variable (white) */
+    color: var(--foreground); /* Use the new --foreground variable (navy blue) */
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
 }
@@ -192,7 +192,7 @@ h1 {
 .text-secondary { color: var(--secondary); }
 .text-accent { color: var(--accent); }
 .text-primary { color: var(--primary); }
-.text-primary-fg { color: #0A2342; }
+.text-primary-fg { color: var(--primary-fg); }
 
 /* --- Stack Tags --- */
 .tags, .tags-accent, .tags-primary { display: flex; flex-wrap: wrap; gap: 0.5rem; }
@@ -234,7 +234,7 @@ h1 {
 }
 
 .nav-container {
-    background: rgba(28, 63, 110, 0.9);
+    background: rgba(10, 35, 66, 0.9); /* Use primary color with transparency */
     backdrop-filter: blur(10px);
     border: 1px solid var(--border);
     padding: 0.75rem;
@@ -249,7 +249,7 @@ h1 {
     display: flex; flex-direction: column; align-items: center; gap: 0.25rem;
     padding: 0.5rem 0.75rem;
     border-radius: 0.75rem;
-    color: var(--muted-fg);
+    color: var(--primary-fg); /* Changed to white for better contrast on dark background */
     transition: all 0.2s;
     min-width: 4rem;
 }
