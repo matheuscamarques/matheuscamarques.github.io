@@ -328,7 +328,7 @@ h1 {
 /* --- Contact / Footer --- */
 .pb-16 { padding-bottom: 6rem; }
 @media (max-width: 640px) {
-    .section.pb-16 { padding-bottom: 4rem; } /* Further reduce padding on small phones */
+    .section.pb-16 { padding-bottom: 6rem; } /* Further reduce padding on small phones */
 }
 
 /* Seção de contato com destaque */
