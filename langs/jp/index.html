@@ -25,6 +25,7 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     
     <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="../../consent.css">
 
     <script type="application/ld+json">
     {
@@ -60,6 +61,11 @@
     </script>
 </head>
 <body>
+    <div id="cookie-consent-banner">
+        <p>このウェブサイトは、ユーザーエクスペリエンスを向上させるためにクッキーを使用しています。閲覧を続けることにより、クッキーの使用に同意するものとします。</p>
+        <button id="accept-cookie-btn">同意する</button>
+        <button id="decline-cookie-btn">拒否する</button>
+    </div>
 
     <header class="header">
         <div class="container header-content">
@@ -514,5 +520,6 @@
             }
         });
     </script>
+    <script src="../../consent.js"></script>
 </body>
 </html>

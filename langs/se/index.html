@@ -25,6 +25,7 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     
     <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="../../consent.css">
 
     <script type="application/ld+json">
     {
@@ -60,6 +61,11 @@
     </script>
 </head>
 <body>
+    <div id="cookie-consent-banner">
+        <p>Denna webbplats använder cookies för att förbättra användarupplevelsen. Genom att fortsätta surfa godkänner du användningen av cookies.</p>
+        <button id="accept-cookie-btn">Acceptera</button>
+        <button id="decline-cookie-btn">Avböj</button>
+    </div>
 
     <header class="header">
         <div class="container header-content">
@@ -501,5 +507,6 @@
             }
         });
     </script>
+    <script src="../../consent.js"></script>
 </body>
 </html>

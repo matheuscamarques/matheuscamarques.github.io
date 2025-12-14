@@ -25,6 +25,7 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     
     <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="../../consent.css">
 
     <script type="application/ld+json">
     {
@@ -60,6 +61,11 @@
     </script>
 </head>
 <body>
+    <div id="cookie-consent-banner">
+        <p>本网站使用cookies来改善用户体验。继续浏览即表示您同意使用cookies。</p>
+        <button id="accept-cookie-btn">接受</button>
+        <button id="decline-cookie-btn">拒绝</button>
+    </div>
 
     <header class="header">
         <div class="container header-content">
@@ -500,5 +506,6 @@
             }
         });
     </script>
+    <script src="../../consent.js"></script>
 </body>
 </html>
