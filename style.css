@@ -325,7 +325,10 @@ h1 {
 .italic { font-style: italic; }
 
 /* --- Contact / Footer --- */
-.pb-32 { padding-bottom: 8rem; }
+.pb-16 { padding-bottom: 4rem; }
+@media (max-width: 640px) {
+    .section.pb-16 { padding-bottom: 2rem; } /* Further reduce padding on small phones */
+}
 
 /* Seção de contato com destaque */
 #contact .card {
