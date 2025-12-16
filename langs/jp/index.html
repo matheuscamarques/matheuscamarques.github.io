@@ -249,6 +249,70 @@
             </div>
         </section>
 
+        <section id="projects" class="section">
+            <div class="container max-w-4xl">
+                <h2>プロジェクトと研究</h2>
+                <div class="card p-8">
+                    <div class="space-y-6">
+                        <div class="text-center">
+                            <span class="badge-sm">アーキテクチャコンセプト</span>
+                            <h3 class="text-2xl font-bold mt-2">NeuroStack-RAG</h3>
+                            <p class="text-lg text-secondary font-medium">LLMのための生物に触発された認知アーキテクチャ</p>
+                        </div>
+
+                        <div>
+                            <h4 class="font-bold text-lg mb-2">エグゼクティブサマリー</h4>
+                            <p class="text-muted">
+                                従来のRAGシステムはエントロピーに悩まされています。データの蓄積はノイズや遅延を生み出し、幻覚の発生率を高めます。NeuroStack-RAGは、人間の脳の記憶メカニズム（能動的忘却、記憶の固定、連合学習）をシミュレートするアーキテクチャであり、単に成長するだけでなく、使用するにつれて進化し、より知的になる知識ベースを作成します。
+                            </p>
+                        </div>
+
+                        <div>
+                            <h4 class="font-bold text-lg mb-3">解決策：データバイオミミクリー</h4>
+                            <div class="grid md:grid-cols-3 gap-4 text-center">
+                                <div class="card p-4 bg-muted hover-shadow">
+                                    <div class="icon-box bg-secondary-light text-secondary mx-auto">
+                                        <i data-lucide="layers"></i>
+                                    </div>
+                                    <h5 class="font-bold mt-3">記憶階層</h5>
+                                    <p class="text-sm text-muted mt-1">データを脳と同様に、作業、エピソード、意味の各層に分割します。</p>
+                                </div>
+                                <div class="card p-4 bg-muted hover-shadow">
+                                    <div class="icon-box bg-accent-light text-accent mx-auto">
+                                        <i data-lucide="brain-circuit"></i>
+                                    </div>
+                                    <h5 class="font-bold mt-3">強化されたシナプス</h5>
+                                    <p class="text-sm text-muted mt-1">ヘッブ学習を模倣し、有用なデータ間の接続を強化し、無関係なものを弱めます。</p>
+                                </div>
+                                <div class="card p-4 bg-muted hover-shadow">
+                                    <div class="icon-box bg-primary-light text-primary mx-auto">
+                                        <i data-lucide="moon"></i>
+                                    </div>
+                                    <h5 class="font-bold mt-3">統合サイクル</h5>
+                                    <p class="text-sm text-muted mt-1">非同期プロセス（「睡眠」など）により、データを再編成、統合し、新たな洞察を生成します。</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h4 class="font-bold text-lg mb-2">技術的な差別化要因</h4>
+                            <ul class="list-disc list-inside text-muted space-y-1">
+                                <li><span class="font-medium text-body">能動的忘却:</span> 古いデータを自動的に削除することで、ノイズとコストを大幅に削減します。</li>
+                                <li><span class="font-medium text-body">文脈的検索:</span> 類似しているものだけでなく、重要なものを優先します。</li>
+                                <li><span class="font-medium text-body">アンチハルシネーション:</span> 知識グラフで事実を統合することにより、信頼性を高めます。</li>
+                            </ul>
+                        </div>
+
+                        <div class="border-t pt-4 text-center">
+                            <p class="text-muted italic">
+                                このプロジェクトは、AIをより効率的で人間の認知に近づける方法についての継続的な探求です。認知システムアーキテクチャについて議論することに興味がありますか？ <a href="#contact" onclick="scrollToId('contact')" class="link">ご連絡ください</a>。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section id="learning" class="section">
             <div class="container max-w-4xl">
                 <h2>現在の研究分野</h2>
@@ -464,6 +528,10 @@
             <button onclick="scrollToId('services')" class="nav-item" id="nav-services">
                 <i data-lucide="briefcase"></i>
                 <span>サービス</span>
+            </button>
+            <button onclick="scrollToId('projects')" class="nav-item" id="nav-projects">
+                <i data-lucide="folder-kanban"></i>
+                <span>プロジェクト</span>
             </button>
             <button onclick="scrollToId('education')" class="nav-item" id="nav-education">
                 <i data-lucide="graduation-cap"></i>

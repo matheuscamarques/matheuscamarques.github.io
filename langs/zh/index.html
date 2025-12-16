@@ -249,6 +249,70 @@
             </div>
         </section>
 
+        <section id="projects" class="section">
+            <div class="container max-w-4xl">
+                <h2>项目与研究</h2>
+                <div class="card p-8">
+                    <div class="space-y-6">
+                        <div class="text-center">
+                            <span class="badge-sm">架构概念</span>
+                            <h3 class="text-2xl font-bold mt-2">NeuroStack-RAG</h3>
+                            <p class="text-lg text-secondary font-medium">一个受生物启发的LLM认知架构</p>
+                        </div>
+
+                        <div>
+                            <h4 class="font-bold text-lg mb-2">执行摘要</h4>
+                            <p class="text-muted">
+                                传统的RAG系统存在熵增问题：数据的积累会产生噪音、降低速度并增加幻觉的频率。NeuroStack-RAG是一个模拟人类大脑记忆机制的架构——主动遗忘、记忆巩固和联想学习——旨在创建一个能够在使用中进化并变得更智能的知识库，而不仅仅是增长。
+                            </p>
+                        </div>
+
+                        <div>
+                            <h4 class="font-bold text-lg mb-3">解决方案：数据仿生学</h4>
+                            <div class="grid md:grid-cols-3 gap-4 text-center">
+                                <div class="card p-4 bg-muted hover-shadow">
+                                    <div class="icon-box bg-secondary-light text-secondary mx-auto">
+                                        <i data-lucide="layers"></i>
+                                    </div>
+                                    <h5 class="font-bold mt-3">记忆层次</h5>
+                                    <p class="text-sm text-muted mt-1">将数据分为工作层、情景层和语义层，类似于大脑。</p>
+                                </div>
+                                <div class="card p-4 bg-muted hover-shadow">
+                                    <div class="icon-box bg-accent-light text-accent mx-auto">
+                                        <i data-lucide="brain-circuit"></i>
+                                    </div>
+                                    <h5 class="font-bold mt-3">增强突触</h5>
+                                    <p class="text-sm text-muted mt-1">加强有用数据之间的连接，削弱不相关的数据，模仿赫布学习。</p>
+                                </div>
+                                <div class="card p-4 bg-muted hover-shadow">
+                                    <div class="icon-box bg-primary-light text-primary mx-auto">
+                                        <i data-lucide="moon"></i>
+                                    </div>
+                                    <h5 class="font-bold mt-3">巩固周期</h5>
+                                    <p class="text-sm text-muted mt-1">通过异步过程（如“睡眠”）来重组、综合数据并从中产生新的见解。</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h4 class="font-bold text-lg mb-2">技术亮点</h4>
+                            <ul class="list-disc list-inside text-muted space-y-1">
+                                <li><span class="font-medium text-body">主动遗忘:</span> 通过自动消除过时数据，大幅减少噪音和成本。</li>
+                                <li><span class="font-medium text-body">上下文检索:</span> 优先处理重要的内容，而不仅仅是相似的内容。</li>
+                                <li><span class="font-medium text-body">抗幻觉:</span> 通过在知识图中巩固事实来提高可靠性。</li>
+                            </ul>
+                        </div>
+
+                        <div class="border-t pt-4 text-center">
+                            <p class="text-muted italic">
+                                这个项目是一个持续的探索，旨在让AI更高效、更接近人类认知。有兴趣讨论认知系统架构吗？ <a href="#contact" onclick="scrollToId('contact')" class="link">请联系</a>。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section id="learning" class="section">
             <div class="container max-w-4xl">
                 <h2>当前研究领域</h2>
@@ -450,6 +514,10 @@
             <button onclick="scrollToId('services')" class="nav-item" id="nav-services">
                 <i data-lucide="briefcase"></i>
                 <span>服务</span>
+            </button>
+            <button onclick="scrollToId('projects')" class="nav-item" id="nav-projects">
+                <i data-lucide="folder-kanban"></i>
+                <span>项目</span>
             </button>
             <button onclick="scrollToId('education')" class="nav-item" id="nav-education">
                 <i data-lucide="graduation-cap"></i>

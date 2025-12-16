@@ -249,6 +249,70 @@
             </div>
         </section>
 
+        <section id="projects" class="section">
+            <div class="container max-w-4xl">
+                <h2>Projekt & Forskning</h2>
+                <div class="card p-8">
+                    <div class="space-y-6">
+                        <div class="text-center">
+                            <span class="badge-sm">Arkitekturkoncept</span>
+                            <h3 class="text-2xl font-bold mt-2">NeuroStack-RAG</h3>
+                            <p class="text-lg text-secondary font-medium">En bio-inspirerad kognitiv arkitektur för LLM:er</p>
+                        </div>
+
+                        <div>
+                            <h4 class="font-bold text-lg mb-2">Sammanfattning</h4>
+                            <p class="text-muted">
+                                Traditionella RAG-system lider av entropi: dataackumulering skapar brus, långsamhet och ökar antalet hallucinationer. NeuroStack-RAG är en arkitektur som simulerar minnesmekanismerna i den mänskliga hjärnan – aktiv glömska, minneskonsolidering och associativt lärande – för att skapa en kunskapsbas som utvecklas och blir mer intelligent med användning, istället för att bara växa.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h4 class="font-bold text-lg mb-3">Lösningen: Databiomimik</h4>
+                            <div class="grid md:grid-cols-3 gap-4 text-center">
+                                <div class="card p-4 bg-muted hover-shadow">
+                                    <div class="icon-box bg-secondary-light text-secondary mx-auto">
+                                        <i data-lucide="layers"></i>
+                                    </div>
+                                    <h5 class="font-bold mt-3">Minneshierarki</h5>
+                                    <p class="text-sm text-muted mt-1">Segmenterar data i arbets-, episodiska och semantiska lager, liknande hjärnan.</p>
+                                </div>
+                                <div class="card p-4 bg-muted hover-shadow">
+                                    <div class="icon-box bg-accent-light text-accent mx-auto">
+                                        <i data-lucide="brain-circuit"></i>
+                                    </div>
+                                    <h5 class="font-bold mt-3">Förstärkt Synaps</h5>
+                                    <p class="text-sm text-muted mt-1">Stärker kopplingar mellan användbar data och försvagar det irrelevanta, vilket efterliknar Hebbs inlärning.</p>
+                                </div>
+                                <div class="card p-4 bg-muted hover-shadow">
+                                    <div class="icon-box bg-primary-light text-primary mx-auto">
+                                        <i data-lucide="moon"></i>
+                                    </div>
+                                    <h5 class="font-bold mt-3">Konsolideringscykler</h5>
+                                    <p class="text-sm text-muted mt-1">Asynkrona processer (som "sömn") för att omorganisera, syntetisera och generera nya insikter från data.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h4 class="font-bold text-lg mb-2">Tekniska skillnader</h4>
+                            <ul class="list-disc list-inside text-muted space-y-1">
+                                <li><span class="font-medium text-body">Aktiv Glömska:</span> Drastisk minskning av brus och kostnader genom att automatiskt eliminera föråldrad data.</li>
+                                <li><span class="font-medium text-body">Kontextuell Hämtning:</span> Prioriterar det som är viktigt, inte bara det som är liknande.</li>
+                                <li><span class="font-medium text-body">Anti-Hallucination:</span> Ökar tillförlitligheten genom att konsolidera fakta i kunskapsgrafer.</li>
+                            </ul>
+                        </div>
+
+                        <div class="border-t pt-4 text-center">
+                            <p class="text-muted italic">
+                                Detta projekt är en pågående utforskning av hur vi kan göra AI mer effektiv och närmare mänsklig kognition. Intresserad av att diskutera kognitiva systemarkitekturer? <a href="#contact" onclick="scrollToId('contact')" class="link">Ta kontakt</a>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section id="learning" class="section">
             <div class="container max-w-4xl">
                 <h2>Aktuella studieområden</h2>
@@ -446,11 +510,15 @@
         <div class="nav-container">
             <button onclick="scrollToId('home')" class="nav-item active" id="nav-home">
                 <i data-lucide="home"></i>
-                <span>Início</span>
+                <span>Hem</span>
             </button>
             <button onclick="scrollToId('services')" class="nav-item" id="nav-services">
                 <i data-lucide="briefcase"></i>
                 <span>Tjänster</span>
+            </button>
+            <button onclick="scrollToId('projects')" class="nav-item" id="nav-projects">
+                <i data-lucide="folder-kanban"></i>
+                <span>Projekt</span>
             </button>
             <button onclick="scrollToId('education')" class="nav-item" id="nav-education">
                 <i data-lucide="graduation-cap"></i>
