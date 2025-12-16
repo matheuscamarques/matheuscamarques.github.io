@@ -263,33 +263,34 @@
                         <div>
                             <h4 class="font-bold text-lg mb-2">Executive Summary</h4>
                             <p class="text-muted">
-                                Traditional RAG systems suffer from entropy: data accumulation generates noise, slowness, and increases the rate of hallucinations. NeuroStack-RAG is an architecture that simulates the memory mechanisms of the human brain—active forgetting, memory consolidation, and associative learning—to create a knowledge base that evolves and becomes more intelligent with use, rather than just growing.
+                                Traditional Retrieval-Augmented Generation (RAG) systems face a critical problem: entropy. Over time, the accumulation of unstructured data generates noise, slowness, and increases the rate of hallucinations. NeuroStack-RAG is an architectural response to this problem, simulating the biological memory mechanisms of the human brain—active forgetting, memory consolidation, and associative learning—to create a knowledge base that not only grows but evolves and becomes more intelligent with use.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h4 class="font-bold text-lg mb-2">The Problem</h4>
+                            <p class="text-muted">
+                                In conventional data architectures, knowledge is static. A document inserted today has the same "weight" in a vector search a year from now, regardless of its actual utility. This creates a linear growth of noise, where relevant information is suffocated by obsolete data, degrading the language model's performance.
                             </p>
                         </div>
 
                         <div>
                             <h4 class="font-bold text-lg mb-3">The Solution: Data Biomimicry</h4>
-                            <div class="grid md:grid-cols-3 gap-4 text-center">
-                                <div class="card p-4 bg-muted hover-shadow">
-                                    <div class="icon-box bg-secondary-light text-secondary mx-auto">
-                                        <i data-lucide="layers"></i>
-                                    </div>
-                                    <h5 class="font-bold mt-3">Memory Hierarchy</h5>
-                                    <p class="text-sm text-muted mt-1">Segments data into working, episodic, and semantic layers, similar to the brain.</p>
+                            <p class="text-muted mb-4">
+                                NeuroStack abandons the idea of a "static database" in favor of a living memory system. It introduces the concept of an information life cycle, where each piece of data must "fight" for its survival based on utility and reinforcement. The architecture operates on three conceptual pillars:
+                            </p>
+                            <div class="space-y-4">
+                                <div class="card bg-muted p-4">
+                                    <h5 class="font-bold">1. Three-Layer Memory Hierarchy</h5>
+                                    <p class="text-sm text-muted mt-1">Like the brain, the system segments data by "age" and semantic complexity: <strong>Eden Space</strong> (Working Memory), <strong>Survivor Space</strong> (Episodic Memory), and <strong>Tenured Space</strong> (Semantic Memory).</p>
                                 </div>
-                                <div class="card p-4 bg-muted hover-shadow">
-                                    <div class="icon-box bg-accent-light text-accent mx-auto">
-                                        <i data-lucide="brain-circuit"></i>
-                                    </div>
-                                    <h5 class="font-bold mt-3">Augmented Synapse</h5>
-                                    <p class="text-sm text-muted mt-1">Strengthens connections between useful data and weakens the irrelevant, mimicking Hebbian learning.</p>
+                                <div class="card bg-muted p-4">
+                                    <h5 class="font-bold">2. Augmented Synapse (Hebbian Learning)</h5>
+                                    <p class="text-sm text-muted mt-1">"Cells that fire together, wire together." The system applies this principle to data, weighting relevance by access history. Useful memories become "synaptically strong," while irrelevant ones weaken.</p>
                                 </div>
-                                <div class="card p-4 bg-muted hover-shadow">
-                                    <div class="icon-box bg-primary-light text-primary mx-auto">
-                                        <i data-lucide="moon"></i>
-                                    </div>
-                                    <h5 class="font-bold mt-3">Consolidation Cycles</h5>
-                                    <p class="text-sm text-muted mt-1">Asynchronous processes (like "sleep") to reorganize, synthesize, and generate new insights from data.</p>
+                                <div class="card bg-muted p-4">
+                                    <h5 class="font-bold">3. "Sleep" Cycles and Offline Consolidation</h5>
+                                    <p class="text-sm text-muted mt-1">Asynchronous processes analogous to human sleep for maintenance. The <strong>Efficiency Phase (NREM)</strong> optimizes searches, and the <strong>Synthesis Phase (REM)</strong> "dreams" about the data to find connections and generate new insights for the Knowledge Graph.</p>
                                 </div>
                             </div>
                         </div>
@@ -297,9 +298,9 @@
                         <div>
                             <h4 class="font-bold text-lg mb-2">Technical Differentiators</h4>
                             <ul class="list-disc list-inside text-muted space-y-1">
-                                <li><span class="font-medium text-body">Active Forgetting:</span> Drastic reduction of noise and costs by automatically eliminating obsolete data.</li>
-                                <li><span class="font-medium text-body">Contextual Retrieval:</span> Prioritizes what is important, not just what is similar.</li>
-                                <li><span class="font-medium text-body">Anti-Hallucination:</span> Increases reliability by consolidating facts into knowledge graphs.</li>
+                                <li><span class="font-medium text-body">Active Forgetting (Semantic Garbage Collection):</span> Drastic reduction in storage costs and noise by automatically eliminating obsolete data.</li>
+                                <li><span class="font-medium text-body">Contextual Retrieval:</span> The system prioritizes what is important, not just what is similar.</li>
+                                <li><span class="font-medium text-body">Anti-Hallucination:</span> By consolidating facts into knowledge graphs and validating contradictions during offline processing, the system increases the reliability of its responses.</li>
                             </ul>
                         </div>
 

@@ -264,33 +264,34 @@
                         <div>
                             <h4 class="font-bold text-lg mb-2">Resumo Executivo</h4>
                             <p class="text-muted">
-                                Sistemas RAG tradicionais sofrem com a entropia: o acúmulo de dados gera ruído, lentidão e aumenta a taxa de alucinações. O NeuroStack-RAG é uma arquitetura que simula os mecanismos de memória do cérebro humano — esquecimento ativo, consolidação e aprendizado por associação — para criar uma base de conhecimento que evolui e se torna mais inteligente com o uso, em vez de apenas crescer.
+                                Sistemas de Geração Aumentada por Recuperação (RAG) tradicionais enfrentam um problema crítico: a entropia. Com o tempo, o acúmulo de dados não estruturados gera ruído, lentidão e aumenta a taxa de alucinações. O NeuroStack-RAG é uma resposta arquitetural a esse problema, simulando os mecanismos biológicos de memória do cérebro humano — esquecimento ativo, consolidação de memória e aprendizado por associação — para criar uma base de conhecimento que não apenas cresce, mas evolui e se torna mais inteligente com o uso.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h4 class="font-bold text-lg mb-2">O Problema</h4>
+                            <p class="text-muted">
+                                Em arquiteturas de dados convencionais, o conhecimento é estático. Um documento inserido hoje tem o mesmo "peso" na busca vetorial daqui a um ano, independentemente de sua utilidade real. Isso cria um crescimento linear de ruído, onde a informação relevante é sufocada por dados obsoletos, degradando a performance do modelo de linguagem.
                             </p>
                         </div>
 
                         <div>
                             <h4 class="font-bold text-lg mb-3">A Solução: Biomimética de Dados</h4>
-                            <div class="grid md:grid-cols-3 gap-4 text-center">
-                                <div class="card p-4 bg-muted hover-shadow">
-                                    <div class="icon-box bg-secondary-light text-secondary mx-auto">
-                                        <i data-lucide="layers"></i>
-                                    </div>
-                                    <h5 class="font-bold mt-3">Hierarquia de Memória</h5>
-                                    <p class="text-sm text-muted mt-1">Segmenta dados em camadas de trabalho, episódica e semântica, similar ao cérebro.</p>
+                            <p class="text-muted mb-4">
+                                O NeuroStack abandona a ideia de "banco de dados estático" em favor de um sistema de memória vivo. Ele introduz o conceito de ciclo de vida da informação, onde cada dado precisa "lutar" pela sua sobrevivência baseando-se em utilidade e reforço. A arquitetura opera sobre três pilares conceituais:
+                            </p>
+                            <div class="space-y-4">
+                                <div class="card bg-muted p-4">
+                                    <h5 class="font-bold">1. Hierarquia de Memória em Três Camadas</h5>
+                                    <p class="text-sm text-muted mt-1">Assim como o cérebro, o sistema segmenta dados por "idade" e complexidade semântica: <strong>Espaço Éden</strong> (Memória de Trabalho), <strong>Espaço Sobrevivente</strong> (Memória Episódica) e <strong>Espaço Tenured</strong> (Memória Semântica).</p>
                                 </div>
-                                <div class="card p-4 bg-muted hover-shadow">
-                                    <div class="icon-box bg-accent-light text-accent mx-auto">
-                                        <i data-lucide="brain-circuit"></i>
-                                    </div>
-                                    <h5 class="font-bold mt-3">Sinapse Aumentada</h5>
-                                    <p class="text-sm text-muted mt-1">Fortalece conexões entre dados úteis e enfraquece o irrelevante, imitando o aprendizado Hebbiano.</p>
+                                <div class="card bg-muted p-4">
+                                    <h5 class="font-bold">2. Sinapse Aumentada (Aprendizado Hebbiano)</h5>
+                                    <p class="text-sm text-muted mt-1">"Células que disparam juntas, permanecem conectadas". O sistema aplica esse princípio aos dados, ponderando a relevância pelo histórico de acesso. Memórias úteis tornam-se "sinapticamente fortes", enquanto as irrelevantes enfraquecem.</p>
                                 </div>
-                                <div class="card p-4 bg-muted hover-shadow">
-                                    <div class="icon-box bg-primary-light text-primary mx-auto">
-                                        <i data-lucide="moon"></i>
-                                    </div>
-                                    <h5 class="font-bold mt-3">Ciclos de Consolidação</h5>
-                                    <p class="text-sm text-muted mt-1">Processos assíncronos (como o "sono") para reorganizar, sintetizar e gerar novos insights a partir dos dados.</p>
+                                <div class="card bg-muted p-4">
+                                    <h5 class="font-bold">3. Ciclos de "Sono" e Consolidação Offline</h5>
+                                    <p class="text-sm text-muted mt-1">Processos assíncronos análogos ao sono humano para manutenção. A <strong>Fase de Eficiência (NREM)</strong> otimiza a busca, e a <strong>Fase de Síntese (REM)</strong> "sonha" com os dados para encontrar conexões e gerar novos insights para o Grafo de Conhecimento.</p>
                                 </div>
                             </div>
                         </div>
@@ -298,9 +299,9 @@
                         <div>
                             <h4 class="font-bold text-lg mb-2">Diferenciais Técnicos</h4>
                             <ul class="list-disc list-inside text-muted space-y-1">
-                                <li><span class="font-medium text-body">Esquecimento Ativo:</span> Redução drástica de ruído e custos ao eliminar dados obsoletos.</li>
-                                <li><span class="font-medium text-body">Recuperação Contextual:</span> Prioriza o que é importante, não apenas o que é similar.</li>
-                                <li><span class="font-medium text-body">Anti-Alucinação:</span> Aumenta a confiabilidade ao consolidar fatos em grafos de conhecimento.</li>
+                                <li><span class="font-medium text-body">Esquecimento Ativo (Garbage Collection Semântico):</span> Redução drástica de custos de armazenamento e ruído ao eliminar automaticamente dados obsoletos.</li>
+                                <li><span class="font-medium text-body">Recuperação Contextual:</span> O sistema prioriza o que é importante, não apenas o que é parecido.</li>
+                                <li><span class="font-medium text-body">Anti-Alucinação:</span> Ao consolidar fatos em grafos e validar contradições durante o processamento offline, o sistema aumenta a confiabilidade das respostas.</li>
                             </ul>
                         </div>
 
