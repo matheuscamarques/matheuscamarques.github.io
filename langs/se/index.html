@@ -263,33 +263,34 @@
                         <div>
                             <h4 class="font-bold text-lg mb-2">Sammanfattning</h4>
                             <p class="text-muted">
-                                Traditionella RAG-system lider av entropi: dataackumulering skapar brus, långsamhet och ökar antalet hallucinationer. NeuroStack-RAG är en arkitektur som simulerar minnesmekanismerna i den mänskliga hjärnan – aktiv glömska, minneskonsolidering och associativt lärande – för att skapa en kunskapsbas som utvecklas och blir mer intelligent med användning, istället för att bara växa.
+                                Traditionella system för Retrieval-Augmented Generation (RAG) står inför ett kritiskt problem: entropi. Med tiden skapar ansamlingen av ostrukturerad data brus, långsamhet och ökar frekvensen av hallucinationer. NeuroStack-RAG är ett arkitektoniskt svar på detta problem, som simulerar de biologiska minnesmekanismerna i den mänskliga hjärnan – aktiv glömska, minneskonsolidering och associativt lärande – för att skapa en kunskapsbas som inte bara växer, utan utvecklas och blir mer intelligent med användning.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h4 class="font-bold text-lg mb-2">Problemet</h4>
+                            <p class="text-muted">
+                                I konventionella dataarkitekturer är kunskapen statisk. Ett dokument som infogas idag har samma "vikt" i en vektorsökning ett år senare, oavsett dess faktiska nytta. Detta skapar en linjär tillväxt av brus, där relevant information kvävs av föråldrad data, vilket försämrar språkmodellens prestanda.
                             </p>
                         </div>
 
                         <div>
                             <h4 class="font-bold text-lg mb-3">Lösningen: Databiomimik</h4>
-                            <div class="grid md:grid-cols-3 gap-4 text-center">
-                                <div class="card p-4 bg-muted hover-shadow">
-                                    <div class="icon-box bg-secondary-light text-secondary mx-auto">
-                                        <i data-lucide="layers"></i>
-                                    </div>
-                                    <h5 class="font-bold mt-3">Minneshierarki</h5>
-                                    <p class="text-sm text-muted mt-1">Segmenterar data i arbets-, episodiska och semantiska lager, liknande hjärnan.</p>
+                            <p class="text-muted mb-4">
+                                NeuroStack överger idén om en "statisk databas" till förmån för ett levande minnessystem. Det introducerar konceptet med en informationslivscykel, där varje datapunkt måste "kämpa" för sin överlevnad baserat på nytta och förstärkning. Arkitekturen vilar på tre konceptuella pelare:
+                            </p>
+                            <div class="space-y-4">
+                                <div class="card bg-muted p-4">
+                                    <h5 class="font-bold">1. Minneshierarki i tre lager</h5>
+                                    <p class="text-sm text-muted mt-1">Liksom hjärnan segmenterar systemet data efter "ålder" och semantisk komplexitet: <strong>Eden-rymd</strong> (Arbetsminne), <strong>Överlevnadsrymd</strong> (Episodiskt minne) och <strong>Bestående rymd</strong> (Semantiskt minne).</p>
                                 </div>
-                                <div class="card p-4 bg-muted hover-shadow">
-                                    <div class="icon-box bg-accent-light text-accent mx-auto">
-                                        <i data-lucide="brain-circuit"></i>
-                                    </div>
-                                    <h5 class="font-bold mt-3">Förstärkt Synaps</h5>
-                                    <p class="text-sm text-muted mt-1">Stärker kopplingar mellan användbar data och försvagar det irrelevanta, vilket efterliknar Hebbs inlärning.</p>
+                                <div class="card bg-muted p-4">
+                                    <h5 class="font-bold">2. Förstärkt Synaps (Hebbiansk inlärning)</h5>
+                                    <p class="text-sm text-muted mt-1">"Celler som avfyras tillsammans, kopplas samman." Systemet tillämpar denna princip på data och viktar relevans efter åtkomsthistorik. Användbara minnen blir "synaptiskt starka", medan irrelevanta försvagas.</p>
                                 </div>
-                                <div class="card p-4 bg-muted hover-shadow">
-                                    <div class="icon-box bg-primary-light text-primary mx-auto">
-                                        <i data-lucide="moon"></i>
-                                    </div>
-                                    <h5 class="font-bold mt-3">Konsolideringscykler</h5>
-                                    <p class="text-sm text-muted mt-1">Asynkrona processer (som "sömn") för att omorganisera, syntetisera och generera nya insikter från data.</p>
+                                <div class="card bg-muted p-4">
+                                    <h5 class="font-bold">3. "Sömn"-cykler och offline-konsolidering</h5>
+                                    <p class="text-sm text-muted mt-1">Asynkrona processer som liknar mänsklig sömn för underhåll. <strong>Effektivitetsfasen (NREM)</strong> optimerar sökningar, och <strong>Syntesfasen (REM)</strong> "drömmer" om datan för att hitta samband och generera nya insikter till Kunskapsgrafen.</p>
                                 </div>
                             </div>
                         </div>
@@ -297,9 +298,9 @@
                         <div>
                             <h4 class="font-bold text-lg mb-2">Tekniska skillnader</h4>
                             <ul class="list-disc list-inside text-muted space-y-1">
-                                <li><span class="font-medium text-body">Aktiv Glömska:</span> Drastisk minskning av brus och kostnader genom att automatiskt eliminera föråldrad data.</li>
-                                <li><span class="font-medium text-body">Kontextuell Hämtning:</span> Prioriterar det som är viktigt, inte bara det som är liknande.</li>
-                                <li><span class="font-medium text-body">Anti-Hallucination:</span> Ökar tillförlitligheten genom att konsolidera fakta i kunskapsgrafer.</li>
+                                <li><span class="font-medium text-body">Aktiv glömska (Semantisk skräpinsamling):</span> Drastisk minskning av lagringskostnader och brus genom att automatiskt eliminera föråldrad data.</li>
+                                <li><span class="font-medium text-body">Kontextuell hämtning:</span> Systemet prioriterar det som är viktigt, inte bara det som är liknande.</li>
+                                <li><span class="font-medium text-body">Anti-hallucination:</span> Genom att konsolidera fakta i kunskapsgrafer och validera motsägelser under offline-bearbetning ökar systemet tillförlitligheten i sina svar.</li>
                             </ul>
                         </div>
 

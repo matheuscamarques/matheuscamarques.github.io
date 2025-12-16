@@ -263,33 +263,34 @@
                         <div>
                             <h4 class="font-bold text-lg mb-2">エグゼクティブサマリー</h4>
                             <p class="text-muted">
-                                従来のRAGシステムはエントロピーに悩まされています。データの蓄積はノイズや遅延を生み出し、幻覚の発生率を高めます。NeuroStack-RAGは、人間の脳の記憶メカニズム（能動的忘却、記憶の固定、連合学習）をシミュレートするアーキテクチャであり、単に成長するだけでなく、使用するにつれて進化し、より知的になる知識ベースを作成します。
+                                従来の検索拡張生成（RAG）システムは、エントロピーという重大な問題に直面しています。時間の経過とともに、非構造化データが蓄積されると、ノイズや遅延が発生し、ハルシネーション（幻覚）の割合が増加します。NeuroStack-RAGは、この問題に対するアーキテクチャ的な解決策であり、人間の脳の生物学的な記憶メカニズム（能動的忘却、記憶の固定化、連合学習）を模倣して、単に成長するだけでなく、使用するにつれて進化し、より賢くなる知識ベースを構築します。
                             </p>
                         </div>
 
                         <div>
-                            <h4 class="font-bold text-lg mb-3">解決策：データバイオミミクリー</h4>
-                            <div class="grid md:grid-cols-3 gap-4 text-center">
-                                <div class="card p-4 bg-muted hover-shadow">
-                                    <div class="icon-box bg-secondary-light text-secondary mx-auto">
-                                        <i data-lucide="layers"></i>
-                                    </div>
-                                    <h5 class="font-bold mt-3">記憶階層</h5>
-                                    <p class="text-sm text-muted mt-1">データを脳と同様に、作業、エピソード、意味の各層に分割します。</p>
+                            <h4 class="font-bold text-lg mb-2">問題点</h4>
+                            <p class="text-muted">
+                                従来のデータアーキテクチャでは、知識は静的です。今日挿入されたドキュメントは、1年後も実際の有用性に関係なく、ベクトル検索で同じ「重み」を持ちます。これにより、関連情報が時代遅れのデータに埋もれてしまい、言語モデルのパフォーマンスが低下するという、ノイズの線形的な増加が生じます。
+                            </p>
+                        </div>
+
+                        <div>
+                            <h4 class="font-bold text-lg mb-3">解決策：データのバイオミミクリー</h4>
+                            <p class="text-muted mb-4">
+                                NeuroStackは、「静的データベース」という考え方を捨て、生きた記憶システムの採用を提唱しています。情報のライフサイクルという概念を導入し、各データが有用性と補強に基づいて「生き残り」をかけて戦う必要があります。このアーキテクチャは、3つの概念的な柱に基づいています。
+                            </p>
+                            <div class="space-y-4">
+                                <div class="card bg-muted p-4">
+                                    <h5 class="font-bold">1. 3層の記憶階層</h5>
+                                    <p class="text-sm text-muted mt-1">脳と同様に、システムはデータを「年齢」と意味的複雑さによって、<strong>エデン空間</strong>（作業記憶）、<strong>サバイバー空間</strong>（エピソード記憶）、<strong>テニュアード空間</strong>（意味記憶）に分類します。</p>
                                 </div>
-                                <div class="card p-4 bg-muted hover-shadow">
-                                    <div class="icon-box bg-accent-light text-accent mx-auto">
-                                        <i data-lucide="brain-circuit"></i>
-                                    </div>
-                                    <h5 class="font-bold mt-3">強化されたシナプス</h5>
-                                    <p class="text-sm text-muted mt-1">ヘッブ学習を模倣し、有用なデータ間の接続を強化し、無関係なものを弱めます。</p>
+                                <div class="card bg-muted p-4">
+                                    <h5 class="font-bold">2. 拡張シナプス（ヘッブ学習）</h5>
+                                    <p class="text-sm text-muted mt-1">「共に発火する細胞は、共に結びつく」。システムは、この原則をデータに適用し、アクセス履歴によって関連性を重み付けします。有用な記憶は「シナプス的に強力」になり、無関係な記憶は弱まります。</p>
                                 </div>
-                                <div class="card p-4 bg-muted hover-shadow">
-                                    <div class="icon-box bg-primary-light text-primary mx-auto">
-                                        <i data-lucide="moon"></i>
-                                    </div>
-                                    <h5 class="font-bold mt-3">統合サイクル</h5>
-                                    <p class="text-sm text-muted mt-1">非同期プロセス（「睡眠」など）により、データを再編成、統合し、新たな洞察を生成します。</p>
+                                <div class="card bg-muted p-4">
+                                    <h5 class="font-bold">3. 「睡眠」サイクルとオフライン統合</h5>
+                                    <p class="text-sm text-muted mt-1">人間の睡眠に類似した非同期プロセスでメンテナンスを行います。<strong>効率フェーズ（NREM）</strong>は検索を最適化し、<strong>統合フェーズ（REM）</strong>はデータを「夢見て」、知識グラフのための新しい洞察を生成します。</p>
                                 </div>
                             </div>
                         </div>
@@ -297,15 +298,15 @@
                         <div>
                             <h4 class="font-bold text-lg mb-2">技術的な差別化要因</h4>
                             <ul class="list-disc list-inside text-muted space-y-1">
-                                <li><span class="font-medium text-body">能動的忘却:</span> 古いデータを自動的に削除することで、ノイズとコストを大幅に削減します。</li>
-                                <li><span class="font-medium text-body">文脈的検索:</span> 類似しているものだけでなく、重要なものを優先します。</li>
-                                <li><span class="font-medium text-body">アンチハルシネーション:</span> 知識グラフで事実を統合することにより、信頼性を高めます。</li>
+                                <li><span class="font-medium text-body">能動的忘却（セマンティックガベージコレクション）:</span> 時代遅れのデータを自動的に削除することにより、ストレージコストとノイズを大幅に削減します。</li>
+                                <li><span class="font-medium text-body">文脈的検索:</span> システムは、単に類似しているものではなく、重要なものを優先します。</li>
+                                <li><span class="font-medium text-body">アンチハルシネーション:</span> オフライン処理中にナレッジグラフに事実を統合し、矛盾を検証することで、システムの応答の信頼性を高めます。</li>
                             </ul>
                         </div>
 
                         <div class="border-t pt-4 text-center">
                             <p class="text-muted italic">
-                                このプロジェクトは、AIをより効率的で人間の認知に近づける方法についての継続的な探求です。認知システムアーキテクチャについて議論することに興味がありますか？ <a href="#contact" onclick="scrollToId('contact')" class="link">ご連絡ください</a>。
+                                このプロジェクトは、AIをより効率的にし、人間の認知に近づける方法についての継続的な探求です。認知システムアーキテクチャについて議論することに興味がありますか？ <a href="#contact" onclick="scrollToId('contact')" class="link">ご連絡ください</a>。
                             </p>
                         </div>
                     </div>
