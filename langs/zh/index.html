@@ -263,43 +263,44 @@
                         <div>
                             <h4 class="font-bold text-lg mb-2">执行摘要</h4>
                             <p class="text-muted">
-                                传统的RAG系统存在熵增问题：数据的积累会产生噪音、降低速度并增加幻觉的频率。NeuroStack-RAG是一个模拟人类大脑记忆机制的架构——主动遗忘、记忆巩固和联想学习——旨在创建一个能够在使用中进化并变得更智能的知识库，而不仅仅是增长。
+                                传统的检索增强生成（RAG）系统面临一个关键问题：熵。随着时间的推移，非结构化数据的积累会产生噪音、减慢速度并增加幻觉的频率。NeuroStack-RAG 是针对此问题的架构性对策，它模仿人脑的生物记忆机制——主动遗忘、记忆巩固和联想学习——来创建一个不仅能增长，还能在使用中进化并变得更智能的知识库。
                             </p>
                         </div>
 
                         <div>
-                            <h4 class="font-bold text-lg mb-3">解决方案：数据仿生学</h4>
-                            <div class="grid md:grid-cols-3 gap-4 text-center">
-                                <div class="card p-4 bg-muted hover-shadow">
-                                    <div class="icon-box bg-secondary-light text-secondary mx-auto">
-                                        <i data-lucide="layers"></i>
-                                    </div>
-                                    <h5 class="font-bold mt-3">记忆层次</h5>
-                                    <p class="text-sm text-muted mt-1">将数据分为工作层、情景层和语义层，类似于大脑。</p>
+                            <h4 class="font-bold text-lg mb-2">问题</h4>
+                            <p class="text-muted">
+                                在传统的数据架构中，知识是静态的。今天插入的文档在一年后的矢量搜索中具有相同的“权重”，而不管其实际效用如何。这会造成噪音的线性增长，相关信息被过时数据所淹没，从而降低语言模型的性能。
+                            </p>
+                        </div>
+
+                        <div>
+                            <h4 class="font-bold text-lg mb-3">解决方案：数据生物模拟</h4>
+                            <p class="text-muted mb-4">
+                                NeuroStack 放弃了“静态数据库”的想法，转而采用一个活的记忆系统。它引入了信息生命周期的概念，每个数据都必须根据其效用和强化来“争取”其生存。该架构在三个概念性支柱上运作：
+                            </p>
+                            <div class="space-y-4">
+                                <div class="card bg-muted p-4">
+                                    <h5 class="font-bold">1. 三层记忆层次结构</h5>
+                                    <p class="text-sm text-muted mt-1">像大脑一样，该系统按“年龄”和语义复杂性对数据进行分段：<strong>伊甸园空间</strong>（工作记忆）、<strong>幸存者空间</strong>（情景记忆）和<strong>终身空间</strong>（语义记忆）。</p>
                                 </div>
-                                <div class="card p-4 bg-muted hover-shadow">
-                                    <div class="icon-box bg-accent-light text-accent mx-auto">
-                                        <i data-lucide="brain-circuit"></i>
-                                    </div>
-                                    <h5 class="font-bold mt-3">增强突触</h5>
-                                    <p class="text-sm text-muted mt-1">加强有用数据之间的连接，削弱不相关的数据，模仿赫布学习。</p>
+                                <div class="card bg-muted p-4">
+                                    <h5 class="font-bold">2. 增强突触（赫布学习）</h5>
+                                    <p class="text-sm text-muted mt-1">“一起放电的神经元会连接在一起。”该系统将此原则应用于数据，通过访问历史来加权相关性。有用的记忆变得“突触强”，而无关的记忆则会减弱。</p>
                                 </div>
-                                <div class="card p-4 bg-muted hover-shadow">
-                                    <div class="icon-box bg-primary-light text-primary mx-auto">
-                                        <i data-lucide="moon"></i>
-                                    </div>
-                                    <h5 class="font-bold mt-3">巩固周期</h5>
-                                    <p class="text-sm text-muted mt-1">通过异步过程（如“睡眠”）来重组、综合数据并从中产生新的见解。</p>
+                                <div class="card bg-muted p-4">
+                                    <h5 class="font-bold">3. “睡眠”周期和离线巩固</h5>
+                                    <p class="text-sm text-muted mt-1">类似于人类睡眠的异步过程进行维护。<strong>效率阶段（NREM）</strong>优化搜索，而<strong>综合阶段（REM）</strong>则“梦见”数据，为知识图谱寻找连接并生成新的见解。</p>
                                 </div>
                             </div>
                         </div>
 
                         <div>
-                            <h4 class="font-bold text-lg mb-2">技术亮点</h4>
+                            <h4 class="font-bold text-lg mb-2">技术差异化</h4>
                             <ul class="list-disc list-inside text-muted space-y-1">
-                                <li><span class="font-medium text-body">主动遗忘:</span> 通过自动消除过时数据，大幅减少噪音和成本。</li>
-                                <li><span class="font-medium text-body">上下文检索:</span> 优先处理重要的内容，而不仅仅是相似的内容。</li>
-                                <li><span class="font-medium text-body">抗幻觉:</span> 通过在知识图中巩固事实来提高可靠性。</li>
+                                <li><span class="font-medium text-body">主动遗忘（语义垃圾收集）:</span> 通过自动消除过时数据，大幅降低存储成本和噪音。</li>
+                                <li><span class="font-medium text-body">上下文检索:</span> 系统优先考虑重要的内容，而不仅仅是相似的内容。</li>
+                                <li><span class="font-medium text-body">抗幻觉:</span> 通过在离线处理过程中将事实整合到知识图中并验证矛盾，系统提高了其响应的可靠性。</li>
                             </ul>
                         </div>
 
