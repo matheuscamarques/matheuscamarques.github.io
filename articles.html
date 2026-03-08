@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Artigos - Matheus de Camargo Marques</title>
+    <meta name="description" content="Explore artigos sobre desenvolvimento de software, Elixir, e outras tecnologias.">
+    <meta name="author" content="Matheus de Camargo Marques">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="consent.css">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YQ3C5D4WGF"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'analytics_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied'
+      });
+
+      gtag('js', new Date());
+      gtag('config', 'G-YQ3C5D4WGF');
+    </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-809117331">
+    </script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'AW-809117331');
+    </script>
+</head>
+<body>
+    <div id="cookie-consent-banner">
+        <p>Este site utiliza cookies para melhorar a experiência do usuário. Ao continuar a navegar, você concorda com o uso de cookies.</p>
+        <button id="accept-cookie-btn">Aceitar</button>
+        <button id="decline-cookie-btn">Recusar</button>
+    </div>
+
+    <header class="header">
+        <div class="container header-content">
+            <a href="index.html" class="logo-wrapper" style="text-decoration: none;">
+                <div class="logo-icon">
+                    <i data-lucide="code-2"></i>
+                </div>
+                <span class="logo-text">matheuscamarques</span>
+            </a>
+            <div class="lang-menu">
+                <a href="articles.html" title="Português">🇧🇷</a>
+                <a href="langs/en/articles.html" title="English">🇬🇧</a>
+                <a href="langs/latim/articles.html" title="Latim">🏛️</a>
+                <a href="langs/se/articles.html" title="Svenska">🇸🇪</a>
+                <a href="langs/jp/articles.html" title="日本語">🇯🇵</a>
+                <a href="langs/zh/articles.html" title="中文">🇨🇳</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <h1 class="text-3xl font-bold mb-8">Artigos</h1>
+
+                <div class="articles-grid">
+                   
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <nav class="bottom-nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-item" style="text-decoration: none;">
+                <i data-lucide="home"></i>
+                <span>Início</span>
+            </a>
+            <a href="articles.html" class="nav-item active" style="text-decoration: none;">
+                <i data-lucide="book-text"></i>
+                <span>Artigos</span>
+            </a>
+            <a href="index.html#services" class="nav-item" style="text-decoration: none;" onclick="event.preventDefault(); window.location.href='index.html#services';">
+                <i data-lucide="briefcase"></i>
+                <span>Serviços</span>
+            </a>
+            <a href="index.html#projects" class="nav-item" style="text-decoration: none;" onclick="event.preventDefault(); window.location.href='index.html#projects';">
+                <i data-lucide="folder-kanban"></i>
+                <span>Projetos</span>
+            </a>
+            <a href="index.html#testimonials" class="nav-item" style="text-decoration: none;" onclick="event.preventDefault(); window.location.href='index.html#testimonials';">
+                <i data-lucide="star"></i>
+                <span>Avaliações</span>
+            </a>
+            <a href="index.html#contact" class="nav-item" style="text-decoration: none;" onclick="event.preventDefault(); window.location.href='index.html#contact';">
+                <i data-lucide="mail"></i>
+                <span>Contato</span>
+            </a>
+        </div>
+    </nav>
+
+    <script>
+        lucide.createIcons();
+    </script>
+    <script src="consent.js"></script>
+</body>
+</html>
