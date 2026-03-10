@@ -112,6 +112,10 @@
                 </p>
                 <div class="actions">
                     <a href="#contact" class="btn btn-primary">Constituere Consultationem</a>
+                    <a href="https://wa.me/+5541987399548" onclick="return gtagSendEvent('https://wa.me/+5541987399548')" class="btn btn-secondary">
+                        <i data-lucide="phone" class="mr-2"></i>
+                        WhatsApp
+                    </a>
                     <a href="#services" class="btn btn-outline">Videre Servitia</a>
                 </div>
             </div>
@@ -586,6 +590,23 @@
                  document.getElementById('nav-home').classList.add("active");
             }
         });
+    </script>
+    <script>
+      // Helper function to delay opening a URL until a gtag event is sent.
+      // Call it in response to an action that should navigate to a URL.
+      function gtagSendEvent(url) {
+        var callback = function () {
+          if (typeof url === 'string') {
+            window.location = url;
+          }
+        };
+        gtag('event', 'conversion_event_contact', {
+          'event_callback': callback,
+          'event_timeout': 2000,
+          // <event_parameters>
+        });
+        return false;
+      }
     </script>
     <script src="../../consent.js"></script>
 </body>
