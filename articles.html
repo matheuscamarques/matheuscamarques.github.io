@@ -58,22 +58,79 @@
             </a>
             <div class="lang-menu">
                 <a href="articles.html" title="Português">🇧🇷</a>
-                <a href="langs/en/articles.html" title="English">🇬🇧</a>
-                <a href="langs/latim/articles.html" title="Latim">🏛️</a>
-                <a href="langs/se/articles.html" title="Svenska">🇸🇪</a>
-                <a href="langs/jp/articles.html" title="日本語">🇯🇵</a>
-                <a href="langs/zh/articles.html" title="中文">🇨🇳</a>
+                <a href="articles.html" title="English">🇬🇧</a>
+                <a href="articles.html" title="Latim">🏛️</a>
+                <a href="articles.html" title="Svenska">🇸🇪</a>
+                <a href="articles.html" title="日本語">🇯🇵</a>
+                <a href="articles.html" title="中文">🇨🇳</a>
             </div>
         </div>
     </header>
 
     <main>
-        <section class="section">
-            <div class="container">
-                <h1 class="text-3xl font-bold mb-8">Artigos</h1>
+        <section id="home" class="section pt-hero">
+            <div class="container max-w-4xl">
+                <div class="badge">
+                    <span>Conteúdo Técnico</span>
+                </div>
+                <h1>Artigos & Insights</h1>
+                <p class="lead">
+                    Explore artigos sobre desenvolvimento de software, arquitetura de sistemas, Elixir, e outras tecnologias que estudo e aplico no dia a dia.
+                </p>
+            </div>
+        </section>
 
+        <section id="articles-list" class="section bg-muted">
+            <div class="container">
                 <div class="articles-grid">
-                   
+                    <a href="articles/microserviços-elixir-otp.html" style="text-decoration: none; color: inherit;">
+                        <div class="card p-6 hover-shadow">
+                            <div class="badge mb-4">
+                                <span>Arquitetura</span>
+                            </div>
+                            <h2 class="text-xl font-bold mb-2">Microserviços com Elixir: Resiliência Moderna na BEAM</h2>
+                            <p class="text-muted mb-4">Descubra como Elixir oferece uma sintaxe elegante e moderna sobre a poderosa BEAM VM para construir sistemas distribuídos escaláveis e resilientes.</p>
+                            <div class="flex-center gap-6 text-muted text-sm">
+                                <div class="flex-center gap-2">
+                                    <i data-lucide="calendar" style="width: 16px; height: 16px;"></i>
+                                    <span>8 de março de 2026</span>
+                                </div>
+                                <div class="flex-center gap-2">
+                                    <i data-lucide="clock" style="width: 16px; height: 16px;"></i>
+                                    <span>15 min de leitura</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section pb-16">
+            <div class="container max-w-4xl">
+                <div class="card p-8 bg-primary text-center">
+                    <h2 class="text-2xl md:text-3xl font-bold mb-4 text-primary-fg">Vamos trabalhar juntos?</h2>
+                    <p class="text-lg opacity-90 leading-relaxed max-w-2xl mx-auto mb-6 text-primary-fg">
+                        Seja para consultoria técnica, aulas personalizadas ou modernização de sistemas, estou pronto para ajudar sua equipe a alcançar o próximo nível.
+                    </p>
+                    <div class="flex-center gap-3 flex-wrap">
+                        <a href="https://wa.me/+5541987399548" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                            <i data-lucide="phone" class="mr-2"></i>
+                            WhatsApp
+                        </a>
+                        <a href="https://github.com/matheuscamarques" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                            <i data-lucide="github" class="mr-2"></i>
+                            GitHub
+                        </a>
+                        <a href="https://linkedin.com/in/matheuscamarques" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                            <i data-lucide="linkedin" class="mr-2"></i>
+                            LinkedIn
+                        </a>
+                        <a href="https://medium.com/@matheuscamarques" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                            <i data-lucide="book-text" class="mr-2"></i>
+                            Medium
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -81,27 +138,27 @@
 
     <nav class="bottom-nav">
         <div class="nav-container">
-            <a href="index.html" class="nav-item" style="text-decoration: none;">
+            <a href="index.html" class="nav-item" id="nav-home">
                 <i data-lucide="home"></i>
                 <span>Início</span>
             </a>
-            <a href="articles.html" class="nav-item active" style="text-decoration: none;">
+            <a href="articles.html" class="nav-item active" id="nav-articles">
                 <i data-lucide="book-text"></i>
                 <span>Artigos</span>
             </a>
-            <a href="index.html#services" class="nav-item" style="text-decoration: none;" onclick="event.preventDefault(); window.location.href='index.html#services';">
+            <a href="index.html#services" class="nav-item" id="nav-services">
                 <i data-lucide="briefcase"></i>
                 <span>Serviços</span>
             </a>
-            <a href="index.html#projects" class="nav-item" style="text-decoration: none;" onclick="event.preventDefault(); window.location.href='index.html#projects';">
+            <a href="index.html#projects" class="nav-item" id="nav-projects">
                 <i data-lucide="folder-kanban"></i>
                 <span>Projetos</span>
             </a>
-            <a href="index.html#testimonials" class="nav-item" style="text-decoration: none;" onclick="event.preventDefault(); window.location.href='index.html#testimonials';">
+            <a href="index.html#testimonials" class="nav-item" id="nav-testimonials">
                 <i data-lucide="star"></i>
                 <span>Avaliações</span>
             </a>
-            <a href="index.html#contact" class="nav-item" style="text-decoration: none;" onclick="event.preventDefault(); window.location.href='index.html#contact';">
+            <a href="index.html#contact" class="nav-item" id="nav-contact-nav">
                 <i data-lucide="mail"></i>
                 <span>Contato</span>
             </a>

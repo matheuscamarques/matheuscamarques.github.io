@@ -390,34 +390,7 @@ h1 {
     background: rgba(255,255,255,0.05);
 }
 
-/* --- Article Card Improvements --- */
-.article-card {
-    transition: all 0.3s ease;
-}
 
-.article-card:hover {
-    border-color: var(--primary);
-    box-shadow: 0 15px 40px -10px rgba(56, 189, 248, 0.2) !important;
-}
-
-.article-card h2 a {
-    position: relative;
-}
-
-.article-card h2 a::after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: var(--primary);
-    transition: width 0.3s ease;
-}
-
-.article-card h2 a:hover::after {
-    width: 100%;
-}
 
 /* --- Text Utilities --- */
 .text-xs { font-size: 0.75rem; }
@@ -591,4 +564,22 @@ a.text-secondary:hover {
     .card.bg-muted {
         padding: 1rem !important;
     }
+}
+
+/* --- Articles Grid --- */
+.articles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.articles-grid a .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    height: 100%;
+}
+
+.articles-grid a:hover .card {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(56, 189, 248, 0.15);
+    border-color: var(--primary);
 }
